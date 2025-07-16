@@ -21,10 +21,10 @@ Nerd Fonts (the main font library that contains the terminal font I use)
 ## INSTRUCTIONS
 step one:
 
-[git clone https://github.com/carrotfarm02/My-Hypr-Dotfiles]
+run `git clone https://github.com/carrotfarm02/My-Hypr-Dotfiles` to clone the repository
 
 step two:
 
-move the files inside the  My-Hypr-Dotfiles folder into ~/.config
+move all of the files (except for the README) inside the  My-Hypr-Dotfiles folder into ~/.config
 
 aaaaand you're done! :)
