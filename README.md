@@ -27,6 +27,10 @@ run `git clone https://github.com/carrotfarm02/My-Hypr-Dotfiles` to clone the re
 
 step two:
 
-move all of the files (except for the README) inside the  My-Hypr-Dotfiles folder into ~/.config
+make the customizations you want (browser, or whatever)
+
+step three:
+
+move all of the files (except for the README) inside the  My-Hypr-Dotfiles folder into ~/.config 
 
 aaaaand you're done! :)
