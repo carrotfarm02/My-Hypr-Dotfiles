@@ -7,6 +7,8 @@ Requires the following packages:
 
 Hyprland (and all of its dependencies)
 
+Waybar (for the top bar, will cause an error if not installed)
+
 Kitty (main terminal emulator)
 
 Hyprpaper (for the wallpaper)
