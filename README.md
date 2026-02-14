@@ -17,7 +17,7 @@ Dolphin (as the file manager)
 
 Rofi (aplication launcher)
 
-Nerd Fonts (the main font library that contains the terminal font I use)
+Nerd Fonts (the font library that contains the terminal font used for this config)
 
 
 ## INSTRUCTIONS
