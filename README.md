@@ -1,5 +1,5 @@
 # My-Hypr-Dotfiles
-So this is mostly for me, feel free to steal if you want though.
+This is mostly for me, but feel free to steal if you want though.
 
 
 ## DEPENDENCIES 
