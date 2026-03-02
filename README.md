@@ -1,6 +1,6 @@
 # My-Hypr-Dotfiles
 This is mostly for me, but feel free to steal if you want though.
-
+![preview of how my configuration looks](Preview.png "Preview")
 
 ## DEPENDENCIES 
 Requires the following packages: 
