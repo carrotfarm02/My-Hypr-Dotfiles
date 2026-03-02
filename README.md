@@ -3,7 +3,7 @@ This is mostly for me, but feel free to steal if you want though.
 
 ![preview of how my configuration looks](Previews/FirstPreview.png "Preview")
 
-![Second Preview](Previews/SecondPreview.png "Preview 2)
+![Second Preview](Previews/SecondPreview.png "Preview 2")
 
 ![Third Preview](Previews/ThirdPreview.png "Preview 3")
 
