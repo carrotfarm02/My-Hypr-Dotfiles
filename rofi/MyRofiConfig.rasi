@@ -1,53 +1,35 @@
 /**
  * ROFI Color theme
- * User: Qball
- * Copyright: Dave Davenport
+ * User: Carrotfarm02
  */
 
 * {
     foreground:  #dddddddd;
     backlight:   #9b799022;
     background-color:  transparent;
-    dark: #1c1c1c;
+    dark: 	#2E0B0B;
+    //main colors
+    lightpink:	#B57094EF;
+    tlightpink:	#B5709499;
+    darkpurple:	#991F91;
+    selected:	#D477A6;
+    white:	#FFFFFF;
+    twhite:	#FFFFFF7F;
+
     // Black
     black:       #3d352a;
     lightblack:  #554444;
-    tlightblack:  #9b799099;
-    //
+    tlightblack: #9b799099;
+
     // Red
     red:         #cd5c5c;
-    lightred:    #cc5533;
-    //
-    // Green
-    green:       #ffffff;
-    lightgreen:  #ffffff;
-    //
-    // Yellow
-    yellow:      #e8ae5b;
-    lightyellow:     #ffa75d;
-    //
-    // Blue
-    blue:      #6495ed;
-    lightblue:     #87ceeb;
-    //
-    // Magenta
-    magenta:      #deb887;
-    lightmagenta:     #996600;
-    //
-    // Cyan
-    cyan:      #b0c4de;
-    tcyan:      #ccb0c4de;
-    lightcyan:     #b0c4de;
-    //
-    // White
-    white:      #bbaa99;
-    lightwhite:     #ddccbb;
-    //
-    // Bold, Italic, Underline
-    highlight:     underline bold #ffffff;
+    lightred:    #cc3333;
+
+    //Bold, Italic, Underline
+    highlight:     underline #ffffff;
 
     transparent: rgba(0,0,0,0);
-    font: "0xProto Nerd Font 10";
+    font: "Ubuntu Nerd Font 13";
 }
 window {
     location: center;
@@ -55,8 +37,8 @@ window {
     transparency: "real";
     padding: 10px;
     border:  0px;
-    border-radius: 10px;
-    color: @magenta;
+    border-radius: 15px;
+    color: @lightpink;
     background-color: @transparent;
     spacing: 0;
     children:  [mainbox];
@@ -71,20 +53,20 @@ message {
     border:  0px 2px 2px 2px;
 //    border-radius: 10px;
     padding: 5;
-    background-color: @tcyan;
+    background-color: @tlightpink;
 }
 message {
-    font: "0xProto Nerd Font 8";
+    font: "Ubuntu Nerd Font 11";
     color: @black;
 }
 inputbar {
-    color: @lightgreen;
+    color: @white;
     padding: 11px;
-    background-color: @tlightblack;
+    background-color: @tlightpink;
     border: 2px 2px 2px 2px;
     border-radius:  15px 15px 0px 0px;
     border-color: @foreground;
-    font: "0xProto Nerd Font 18";
+    font: "Ubuntu Nerd Font 18";
 }
 entry,prompt,case-indicator {
     text-font: inherit;
@@ -98,7 +80,7 @@ listview {
     border-radius: 0px 0px 15px 15px;
     border-color: @foreground;
     border: 0px 2px 2px 2px;
-    background-color: #9b7990;
+    background-color: @lightpink;
     dynamic: false;
     lines: 10;
 }
@@ -116,10 +98,10 @@ element-text {
     text-color:       inherit;
 }
 element selected.normal {
-    background-color: @blue;
+    background-color: @selected;
 }
 element normal active {
-    foreground: @lightblue;
+    foreground: @selected;
 }
 element normal urgent {
     foreground: @lightred;
@@ -127,14 +109,14 @@ element normal urgent {
 element alternate normal {
 }
 element alternate active {
-    foreground: @lightblue;
+    foreground: @selected;
 }
 element alternate urgent {
     foreground: @lightred;
 }
 element selected active {
-    background-color: @lightblue;
-    foreground: @dark;
+    background-color: @selected;
+    foreground: inherit;
 }
 element selected urgent {
     background-color: @lightred;
@@ -157,7 +139,7 @@ mode-switcher {
     border: 0px 0px 0px 0px;
 }
 button {
-    font: "FontAwesome 22";
+    font: "Ubuntu Nerd Font 22";
     padding: 6px;
     border: 2px 0px 2px 2px;
     border-radius: 4px 0px 0px 4px;
