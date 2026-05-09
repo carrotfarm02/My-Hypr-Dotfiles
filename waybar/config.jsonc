@@ -1,6 +1,7 @@
 // -*- mode: jsonc -*-
 {
     "margin": 3, // similar to padding, distance that the bar keeps from all other items (px)
+    //"margin-bottom": 5, spacing from bottom of waybar (px)
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     //"height": 30, // Waybar height (to be removed for auto height)
@@ -111,8 +112,8 @@
         // }
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
@@ -204,16 +205,4 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-    "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
-    }
 }
