@@ -112,6 +112,7 @@
         // }
     },
     "clock": {
+		"format": "<b>{:%H:%M}</b>",
         "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>",
         "format-alt": "{:%Y-%m-%d}"
@@ -167,20 +168,20 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-wifi": "<b>{essid} ({signalStrength}%) </b>",
+        "format-ethernet": "<b>{ipaddr}/{cidr} </b>",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "<b>{ifname}: {ipaddr}/{cidr}</b>"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format": "<b>{volume}% {icon} {format_source}</b>",
+        "format-bluetooth": "<b>{volume}% {icon} {format_source}</b>",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": "<b>{volume}% </b>",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
