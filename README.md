@@ -7,6 +7,7 @@ This is mostly for me, but feel free to steal if you want though.
 
 ![Third Preview](Previews/ThirdPreview.png "Preview 3")
 
+![Notification Preview](Previews/NotificationPreview.png "Notification Preview")
 
 ## DEPENDENCIES 
 Requires the following packages: 
@@ -39,10 +40,7 @@ make the customizations you want (browser, or whatever)
 
 step three:
 
-move all of the files except for README and dunst inside the  My-Hypr-Dotfiles folder into ~/.config 
+move all of the files except for the README inside the 'My-Hypr-Dotfiles' folder into ~/.config 
 
-step four:
-
-Move the dunst folder into /etc (requires root privlages), which should look like: /etc/dunst/dunstrc
 
 aaaaand you're done! :)
