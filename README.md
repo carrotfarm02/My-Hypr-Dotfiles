@@ -7,6 +7,7 @@ This is mostly for me, but feel free to steal if you want though.
 
 ![Third Preview](Previews/ThirdPreview.png "Preview 3")
 
+![Notification Preview](Previews/NotificationPreview.png "Notification Preview")
 
 ## DEPENDENCIES 
 Requires the following packages: 
