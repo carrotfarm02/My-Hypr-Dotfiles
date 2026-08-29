@@ -40,7 +40,6 @@ make the customizations you want (browser, or whatever)
 
 step three:
 
-move all of the files except for the README inside the 'My-Hypr-Dotfiles' folder into ~/.config 
-
+move all of the files except for the README inside the 'My-Hypr-Dotfiles' folder, and the 'Previews' folder into ~/.config (these files are deletable without repercussion)
 
 aaaaand you're done! :)
