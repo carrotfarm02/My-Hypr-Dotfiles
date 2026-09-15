@@ -2,7 +2,6 @@
 ---- MONITORS ----
 ------------------
 
--- See https://wiki.hypr.land/Configuring/Monitors/
 hl.monitor({
     output = "",
     mode = "preferred",
@@ -13,8 +12,6 @@ hl.monitor({
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
-
--- See https://wiki.hypr.land/Configuring/Keywords/
 
 -- Set programs that you use
 local terminal = "kitty"
@@ -27,20 +24,22 @@ local windSwitch = "rofi -show window"
 ---- AUTOSTART ----
 -------------------
 
+hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
+
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 
 hl.on("hyprland.start", function()
     -- hl.exec_cmd(terminal)
+    hl.exec_cmd("dunst")
     hl.exec_cmd("nm-applet") 
     hl.exec_cmd("hyprpaper & waybar")
+    hl.exec_cmd("hyprpm reload")
 end)
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
-
--- See https://wiki.hypr.land/Configuring/Environment-variables/
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
@@ -60,11 +59,11 @@ hl.layer_rule({ match = { namespace = "waybar" }, blur = true, ignore_alpha = 0.
 hl.layer_rule({ match = { namespace = "notifications" }, blur = true, ignore_alpha = 0.5 })
 hl.layer_rule({ match = { namespace = "rofi" },blur = true, ignore_alpha = 0.5 })
 
+
 -----------------------
 ----- PERMISSIONS -----
 -----------------------
 
--- See https://wiki.hypr.land/Configuring/Permissions/
 -- Please note permission changes here require a Hyprland restart and are not applied on-the-fly
 -- for security reasons
 
@@ -74,15 +73,9 @@ hl.layer_rule({ match = { namespace = "rofi" },blur = true, ignore_alpha = 0.5 }
 --    },
 -- })
 
--- hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
--- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
--- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow"
-
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
-
--- Refer to https://wiki.hypr.land/Configuring/Variables/
 
 hl.config({
     general = {
@@ -101,9 +94,34 @@ hl.config({
 
         -- Please see https://wiki.hypr.land/Configuring/Tearing/ before you turn this on
         allow_tearing = false,
-
+    
         layout = "dwindle",
     },
+
+    plugin = {
+        -- gloview = {
+            -- blur = 0.8,
+            -- preview_round = 12,
+
+	        -- strip_active_border_size = 2,
+            -- close_button_color = 0xFFFF0000,
+	        -- strip_active_border = 0xFFFF55AA,
+
+            -- hover_border = 0xDDFF55AA,
+            -- select_border = 0xDDCC8899,
+            -- backdrop_color = 0x80FFDDFF,
+
+            -- exit_on_click = 0,
+            -- strip_gap = 48,
+	        -- show_empty = 0,
+            -- show_all_workspaces = true,
+            -- show_workspace_labels = false,
+
+	        -- key_activate = "space",            
+            -- key_close_window = "q"
+        },
+    },
+
 
     decoration = {
         rounding = 10,
@@ -122,7 +140,6 @@ hl.config({
             color = 0x1a1a1aee,
         },
 
-    -- https://wiki.hypr.land/Configuring/Variables/blur
         blur = {
             enabled = true,
             size = 5,
@@ -164,7 +181,6 @@ hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 1.21, bezier = "
 hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
 
--- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
 -- uncomment all if you wish to use that.
 -- hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
@@ -182,13 +198,11 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 --     rounding    = 0,
 -- })
 
--- See https://wiki.hypr.land/Configuring/Dwindle-Layout/ for more
 hl.config({
     dwindle = {
         preserve_split = true -- You probably want this
     },
 
--- See https://wiki.hypr.land/Configuring/Master-Layout/ for more
     master = {
         new_status = slave
     },
@@ -225,15 +239,21 @@ hl.config ({
     },
 })
 
--- example gesture
--- hl.gesture({
---    fingers = 3,
---    direction = "horizontal",
---    action = "workspace"
--- })
+hl.gesture({
+    fingers = 3,
+    direction = "horizontal",
+    action = "workspace"
+})
+
+--hl.gesture({
+--    fingers = 2,
+--    direction = "pinchin",
+--    action = {
+--        start = function(e) hl.plugin.gloview.open end
+--    }
+--})
 
 -- Example per-device config
--- See https://wiki.hypr.land/Configuring/Keywords/per-device-input-configs for more
 -- hl.device({
 --     name = "epic-mouse-v1"
 --     sensitivity = 0,
@@ -243,9 +263,7 @@ hl.config ({
 ---- KEYBINDINGS ----
 ---------------------
 
--- See https://wiki.hypr.land/Configuring/Keywords/
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
--- Example binds, see https://wiki.hypr.land/Configuring/Binds/ for more
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
@@ -257,9 +275,9 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 -- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo()), 
 -- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
--- Hyprshot  keybindings
-hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
-hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
+-- Screenshot keybindings
+hl.bind("Print", hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"'))
+hl.bind("CTRL + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"'))
 
 -- Move focus with mainMod + home row left hand
 hl.bind(mainMod .. " + A", hl.dsp.focus({ direction = "left" }))
@@ -282,7 +300,7 @@ hl.bind(mainMod .. " + MINUS", hl.dsp.layout("mfact -0.025"))
 hl.bind(mainMod .. " + EQUAL", hl.dsp.layout("mfact +0.025"))
 
 -- Focus the Master window (Master Layout)
-hl.bind(mainMod .. " + Y", hl.dsp.layout("focusmaster"))
+hl.bind(mainMod .. " + C", hl.dsp.layout("focusmaster"))
 
 -- Move focused window with mainMod + home row
 hl.bind(mainMod .. " + J", hl.dsp.window.swap({ direction = "left" }))
@@ -306,7 +324,7 @@ end
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + W", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.window.move({ workspace = "special:magic" }))
-hl.bind(mainMod .. " + SHIFT + T", hl.dsp.window.fullscreen({ "maximized", "toggle"}))
+hl.bind(mainMod .. " + SHIFT + T", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle"}))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }) )
@@ -333,12 +351,23 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 -- Window Switch
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(windSwitch))
 
+-- gloview, uncomment if you have installed the plugin (hyprpm install https://github.com/fedsfarm/gloview && hyprpm enable gloview)
+-- hl.bind(mainMod .. " + Y", hl.plugin.gloview.toggle)
+
+-- hl.gesture({ 
+--    fingers = 3, 
+--    direction = "up", 
+--    action = hl.plugin.gloview.open
+-- })
+-- hl.gesture({
+--    fingers = 3,
+--    direction = "down",
+--    action = hl.plugin.gloview.close
+-- })
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
-
--- See https://wiki.hypr.land/Configuring/Window-Rules/ for more
--- See https://wiki.hypr.land/Configuring/Workspace-Rules/ for workspace rules
 
 hl.workspace_rule({ workspace = "1", layout = "master"})
 hl.workspace_rule({ workspace = "2", layout = "monocle"})
