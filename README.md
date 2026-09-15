@@ -14,7 +14,9 @@ Requires the following packages:
 
 Hyprland (and all of its dependencies)
 
-Waybar (for the top bar, will cause an error if not installed)
+Grim, Slurp, and Satty (for screenshots)
+
+Waybar (for the top bar)
 
 Kitty (main terminal emulator)
 
@@ -28,6 +30,7 @@ Dunst (notification dispatcher)
 
 Nerd Fonts (the font library that contains the terminal font used for this config)
 
+Optional: plugin "Gloview", by fedsfarm on GitHub.
 
 ## INSTALLATION INSTRUCTIONS
 step one:
