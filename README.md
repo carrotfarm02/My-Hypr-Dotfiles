@@ -39,10 +39,12 @@ run `git clone https://github.com/carrotfarm02/My-Hypr-Dotfiles` to clone the re
 
 step two:
 
-make the customizations you want (browser, or whatever)
+make the customizations you want (browser, or whatever) (also may be done after step 3)
 
 step three:
 
-move all of the files except for the README inside the 'My-Hypr-Dotfiles' folder, and the 'Previews' folder into ~/.config (these files are deletable without repercussion)
+move all of the files except for the README and 'Previews' folder inside the 
+'My-Hypr-Dotfiles' folder into ~/.config. You can delete the afformentioned 
+README and Previews file and folder respectively.
 
 aaaaand you're done! :)
