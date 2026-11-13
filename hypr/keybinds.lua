@@ -101,16 +101,16 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(windSwitch))
 -- gloview
 hl.bind(mainMod .. " + Y", hl.plugin.gloview.toggle)
 
- hl.gesture({ 
-     fingers = 3, 
-     direction = "up", 
-     action = hl.plugin.gloview.open
-})
-hl.gesture({
-    fingers = 3,
-    direction = "down",
-    action = hl.plugin.gloview.close
-})
+--hl.gesture({ 
+--    fingers = 3, 
+--    direction = "up", 
+--    action = hl.plugin.gloview.open
+--})
+--hl.gesture({
+--    fingers = 3,
+--    direction = "down",
+--    action = hl.plugin.gloview.close
+--})
 
 -- swap workspaces with three-finger swipes.
 hl.gesture({
