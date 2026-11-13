@@ -47,4 +47,17 @@ move all of the files except for the README and 'Previews' folder inside the
 'My-Hypr-Dotfiles' folder into ~/.config. You can delete the afformentioned 
 README and Previews file and folder respectively.
 
+Also: I am open to trying to implement any features you request, just open an
+
 aaaaand you're done! :)
+
+## NOTE TO USERS
+I didn't think anyone had seen, or cloned, this project at all, and really
+just used it for storing my own dotfiles. Sincerely to those who might
+actually be using this, THANK YOU! I checked the traffic today and was 
+utterly shocked that anyone actually cloned it. It's a strange, wonderful
+feeling.
+
+Also: if you have any ideas, I'd love to try and implement them! I'm 
+struggling to find a direction to build these in. Just put it as an
+"issue", and I'll probably find it.
