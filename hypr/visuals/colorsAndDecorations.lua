@@ -18,20 +18,20 @@ hl.config({
         layout = "dwindle",
     },
 
-    plugin = {
-        gloview = {
-            blur = 0.1,
-            preview_round = 12,
-            strip_gap = 48,
-            hover_border = 0xFF90DBCB,
-            select_border = 0xFF9090CC,
-            backdrop_color = 0xff405080,
-            show_all_workspaces = true,
-            show_workspace_labels = false,
-
-            key_close_window = "q"
-        }
-    },
+--    plugin = {
+--        gloview = {
+--            blur = 0.1,
+--            preview_round = 12,
+--            strip_gap = 48,
+--            hover_border = 0xFF90DBCB,
+--            select_border = 0xFF9090CC,
+--            backdrop_color = 0xff405080,
+--            show_all_workspaces = true,
+--            show_workspace_labels = false,
+--
+--            key_close_window = "q"
+--        }
+--    },
 
 
     decoration = {
